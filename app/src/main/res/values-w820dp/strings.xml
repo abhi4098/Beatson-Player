@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appName">BeatsOn</string>
+    <string name="label_latest_track">Latest Tracks</string>
+    <string name="label_top_bands">Top Bands</string>
+    <string name="label_top_artists">Top Artists</string>
+    <string name="label_recent_viewed">Recently  Viewed</string>
+    <string name="company_name">Beatson</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_fpwd">Forgot Password?</string>
+    <string name="label_fb_login">Login with Facebook</string>
+    <string name="label_gmail_login">Login with Gmail</string>
+    <string name="label_signup">I don\'t have an Account? Signup</string>
+</resources>
