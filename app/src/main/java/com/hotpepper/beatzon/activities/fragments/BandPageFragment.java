@@ -1,6 +1,5 @@
 package com.hotpepper.beatzon.activities.fragments;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
@@ -11,28 +10,28 @@ import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
 import com.hotpepper.beatzon.R;
-
-import butterknife.ButterKnife;
-import customViews.homepage.LatestTracksView;
-import customViews.homepage.RecentViewedView;
-import customViews.homepage.TopArtistsView;
-import customViews.homepage.TopBandsView;
 import com.hotpepper.beatzon.activities.interfaces.ViewLoadCallback;
 import com.hotpepper.beatzon.activities.tasks.LoadViewAsync;
 
+import butterknife.ButterKnife;
+import customView.bandpage.AllTracksView;
+import customView.bandpage.MostPopularTracksView;
+import customView.bandpage.NewestTracksView;
+
 /**
- * A simple {@link Fragment} subclass.
+ * Created by Abhinandan on 3/5/17.
  */
-public class HomePageFragment extends Fragment implements ViewLoadCallback{
+
+public class BandPageFragment extends Fragment implements ViewLoadCallback {
     NestedScrollView rootView;
     ViewLoadCallback viewLoadCallBack;
     LinearLayout viewContainer;
 
-    LatestTracksView latestTracksView;
-    TopBandsView topBandsView;
-    TopArtistsView topArtistsView;
-    RecentViewedView recentViewedView;
-    public HomePageFragment() {
+    MostPopularTracksView mostPopularTracks;
+    NewestTracksView newestTracksView;
+    AllTracksView allTracksView;
+   // RecentViewedView recentViewedView;
+    public BandPageFragment() {
         // Required empty public constructor
     }
 
@@ -51,7 +50,7 @@ public class HomePageFragment extends Fragment implements ViewLoadCallback{
                     rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 } else
                     rootView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                new LoadViewAsync(getActivity(), viewLoadCallBack).execute(R.layout.fragment_home_page);
+                new LoadViewAsync(getActivity(), viewLoadCallBack).execute(R.layout.fragment_band_page);
             }
         });
         return rootView;
@@ -69,19 +68,19 @@ public class HomePageFragment extends Fragment implements ViewLoadCallback{
     private void updateUIWithData() {
 
 
-        latestTracksView = new LatestTracksView(getActivity(),viewContainer);
-        latestTracksView.updateUI();
+        mostPopularTracks = new MostPopularTracksView(getActivity(),viewContainer);
+        mostPopularTracks.updateUI();
 
-        topBandsView = new TopBandsView(getActivity(),viewContainer);
-        topBandsView.updateUI();
+        newestTracksView = new NewestTracksView(getActivity(),viewContainer);
+        newestTracksView.updateUI();
+        allTracksView = new AllTracksView(getActivity(),viewContainer);
+        allTracksView.updateUI();
 
-
-        topArtistsView = new TopArtistsView(getActivity(),viewContainer);
-        topArtistsView.updateUI();
+       /*
 
         recentViewedView = new RecentViewedView(getActivity(),viewContainer);
         recentViewedView.updateUI();
-
+*/
 
         rootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             public void onGlobalLayout() {
@@ -96,3 +95,4 @@ public class HomePageFragment extends Fragment implements ViewLoadCallback{
 
 
 }
+

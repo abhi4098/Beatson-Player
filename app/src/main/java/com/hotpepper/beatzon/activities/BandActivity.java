@@ -1,30 +1,24 @@
 package com.hotpepper.beatzon.activities;
 
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-
 import com.hotpepper.beatzon.R;
+import com.hotpepper.beatzon.activities.fragments.BandPageFragment;
 
 import butterknife.ButterKnife;
-import com.hotpepper.beatzon.activities.fragments.HomePageFragment;
 
+public class BandActivity extends BaseActivity {
 
-public class HomePageActivity extends BaseActivity {
-   /* @BindView(R.id.txtTest)
-    TextView testTextView;*/
-
-    Toolbar toolbar;
 
     @Override
     public int getLayoutResourceId() {
-        return R.layout.activity_main;
+        return R.layout.activity_band;
     }
 
     @Override
@@ -34,12 +28,13 @@ public class HomePageActivity extends BaseActivity {
 
     @Override
     public void onNavigationIconClick(View v) {
-       onBackPressed();
+        onBackPressed();
+
     }
 
     @Override
     public String getActivityTitle() {
-        return "BeatsOn";
+        return "Band Name";
     }
 
     @Override
@@ -56,12 +51,10 @@ public class HomePageActivity extends BaseActivity {
         setTitleNames(toolbar);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        HomePageFragment homePageFragment = new HomePageFragment();
-        fragmentTransaction.add(R.id.fragement_container, homePageFragment,"homepage");
+        BandPageFragment bandPageFragment = new BandPageFragment();
+        fragmentTransaction.add(R.id.band_fragment_container, bandPageFragment, "bandpage");
         fragmentTransaction.commit();
     }
-
-
 
     private void setTitleNames(Toolbar toolbar) {
 

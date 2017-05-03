@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/label_latest_track"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/newest_band_tracks" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/newest_tracks"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scrollIndicators="none"
+        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+</LinearLayout>

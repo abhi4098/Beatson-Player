@@ -16,4 +16,7 @@
     <string name="label_fb_login">Login with Facebook</string>
     <string name="label_gmail_login">Login with Gmail</string>
     <string name="label_signup">I don\'t have an Account? Signup</string>
+    <string name="most_popular_tracks">Most Popular Tracks</string>
+    <string name="newest_band_tracks">Newest</string>
+    <string name="all_tracks">All Tracks</string>
 </resources>
