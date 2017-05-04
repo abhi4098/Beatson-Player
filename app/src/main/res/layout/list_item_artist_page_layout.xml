@@ -2,8 +2,8 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/result_card"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="310dp"
+    android:layout_height="160dp"
     android:padding="@dimen/activity_horizontal_margin"
     app:cardBackgroundColor="@color/white"
     app:contentPadding="@dimen/activity_horizontal_margin"
@@ -16,9 +16,8 @@
         android:id="@+id/imgTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mr_ic_play_light"
+        android:src="@drawable/play_icon"
         android:scaleType="fitXY"
-        android:padding="7dp"
         android:textColor="@color/gray" />
 
 </android.support.v7.widget.CardView>

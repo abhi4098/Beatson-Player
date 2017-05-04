@@ -1,16 +1,20 @@
 package customViews.homepage;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.hotpepper.beatzon.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hotpepper.beatzon.activities.ArtistActivity;
+import com.hotpepper.beatzon.activities.BandActivity;
 import com.hotpepper.beatzon.activities.adapters.TopArtistsAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -66,6 +70,8 @@ public class TopArtistsView implements RecyclerViewOnClick {
     }
     @Override
     public void onItemClick(View v, int position) {
-
+        Toast.makeText(context,"Clicked",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(context, ArtistActivity.class);
+        context.startActivity(intent);
     }
 }

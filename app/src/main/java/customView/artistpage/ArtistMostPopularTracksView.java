@@ -1,4 +1,4 @@
-package customView.bandpage;
+package customView.artistpage;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.hotpepper.beatzon.R;
+import com.hotpepper.beatzon.activities.adapters.ArtistMostPopularTracksAdapter;
 import com.hotpepper.beatzon.activities.adapters.MostPopularTrackAdapter;
 import com.hotpepper.beatzon.activities.interfaces.RecyclerViewOnClick;
 
@@ -21,32 +22,34 @@ import butterknife.ButterKnife;
  * Created by Abhinandan on 3/5/17.
  */
 
-public class MostPopularTracksView implements RecyclerViewOnClick {
+public class ArtistMostPopularTracksView implements RecyclerViewOnClick {
     Context mContext;
-    LinearLayout mostPopularTrackLayout;
-    @BindView(R.id.most_popular_track_rv)
+    LinearLayout artistmostPopularTrackLayout;
+    @BindView(R.id.artist_most_popular_track_rv)
     RecyclerView recyclerView;
 
-    public MostPopularTracksView(Context mContext, LinearLayout container) {
+    public ArtistMostPopularTracksView(Context mContext, LinearLayout container) {
         this.mContext = mContext;
-        mostPopularTrackLayout = (LinearLayout) View.inflate(mContext, R.layout.customview_most_popular_tracks_layout,null);
-        container.addView(mostPopularTrackLayout);
+        artistmostPopularTrackLayout = (LinearLayout) View.inflate(mContext, R.layout.customview_artist_most_populat_layout,null);
+        container.addView(artistmostPopularTrackLayout);
         ButterKnife.bind(this,container);
     }
 
 
     public void updateUI(){
 
-        List<String> mostPopularTrackList = new ArrayList<>();
-        mostPopularTrackList.add("1");
+        List<String> artistMostPopularTrackList = new ArrayList<>();
+        artistMostPopularTrackList.add("1");
+        artistMostPopularTrackList.add("1");
+        artistMostPopularTrackList.add("1");
 
 
 
-        MostPopularTrackAdapter mostPopularTrackAdapter = new MostPopularTrackAdapter(mContext, mostPopularTrackList, this);
+        ArtistMostPopularTracksAdapter artistMostPopularTrackAdapter = new ArtistMostPopularTracksAdapter(mContext, artistMostPopularTrackList, this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(mostPopularTrackAdapter);
+        recyclerView.setAdapter(artistMostPopularTrackAdapter);
         recyclerView.setNestedScrollingEnabled(false);
 
 

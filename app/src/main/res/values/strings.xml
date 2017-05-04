@@ -4,6 +4,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="appName">BeatsOn</string>
+    <string name="band_page">Band Name</string>
+    <string name="artist_page">Artist Name</string>
     <string name="label_latest_track">Latest Tracks</string>
     <string name="label_top_bands">Top Bands</string>
     <string name="label_top_artists">Top Artists</string>
@@ -19,4 +21,5 @@
     <string name="most_popular_tracks">Most Popular Tracks</string>
     <string name="newest_band_tracks">Newest</string>
     <string name="all_tracks">All Tracks</string>
+    <string name="band_of_artist">Band of this Artist</string>
 </resources>
