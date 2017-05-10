@@ -1,6 +1,7 @@
 package customView.artistpage;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.hotpepper.beatzon.R;
+import com.hotpepper.beatzon.activities.PlayerScreenActivity;
 import com.hotpepper.beatzon.activities.adapters.AllTrackAdapter;
 import com.hotpepper.beatzon.activities.interfaces.RecyclerViewOnClick;
 
@@ -62,6 +64,9 @@ public class ArtistAllTracksView implements RecyclerViewOnClick {
     public void onItemClick(View v, int position) {
 
         Toast.makeText(mContext,"Clicked",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(mContext, PlayerScreenActivity.class);
+        mContext.startActivity(intent);
+
 
     }
 }

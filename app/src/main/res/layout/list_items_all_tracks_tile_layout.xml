@@ -16,7 +16,7 @@
         android:id="@+id/imgTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mr_ic_play_light"
+        android:src="@drawable/ic_play_arrow_black_24dp"
         android:scaleType="fitXY"
         android:padding="7dp"
         android:textColor="@color/gray" />
